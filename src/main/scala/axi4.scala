@@ -221,8 +221,4 @@ class AXI4LiteSlave(addr_width: Int, data_width: Int) extends Module {
 
 }
 
-object axi4 {
-  def main(args: Array[String]) {
-    chiselMain(args, () => Module(new AXI4LiteSlave(4, 32))) 
-  }
-}
+

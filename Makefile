@@ -1,10 +1,13 @@
 
 SRC	:= src/main/scala/axi4.scala
 
-TARGET	:= 
+ifndef
+	TARGET	:= lite_slave_test
+endif
+
 
 all:
-	sbt "run --backend v --targetDir ./output"
+	sbt "run $(TARGET) --backend v --targetDir ./output"
 
 clean:
 	rm -rf output project target
